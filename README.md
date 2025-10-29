@@ -49,7 +49,7 @@ Este relatório documenta uma auditoria de segurança focada na simulação de a
 ## ## II. Cenários de Ataque de Força Bruta
 
 > **Observação:** Estes cenários foram executados em ambiente controlado (Metasploitable2) e documentados com evidências (logs e screenshots).
-```
+
 ---
 
 ### Cenário 1: Quebra de Senha no Serviço FTP (Medusa)
