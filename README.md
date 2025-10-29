@@ -43,7 +43,7 @@ Este relatório documenta uma auditoria de segurança focada na simulação de a
    nmap --version
    smbclient --version
    enum4linux -h
-
+```
 ---
 
 ## ## II. Cenários de Ataque de Força Bruta
